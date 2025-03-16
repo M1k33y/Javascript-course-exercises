@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rock Paper Scissors</title>
+
+</head>
+
+<body>
+  <p>Rock Paper Scissors</p>
+
+  <button onclick="
+    playGame('rock');
+  ">Rock</button>
+
+  <button onclick="
+   playGame('paper');
+  ">Paper</button>
+
+  <button onclick="
+   playGame('scissors');
+  ">Scissors</button>
+
+  <button onclick=" 
+    score.Wins=0;
+    score.Loses=0;
+    score.Ties=0;
+    localStorage.removeItem('score');
+  ">
+    Reset score</button>
+
+  <script>
+
+    let computerMove = '';
+    let result = '';
+    let score = JSON.parse(localStorage.getItem('score')) || {
+      Wins: 0, Loses: 0, Ties: 0
+    };;
+
+    /*Diferente dintre null si undefined
+    null=cand vrei intentionat ca ceva sa fie empty
+    undefined= e pur si simplu nedefinit nu pt ca l-ai setat tu
+    
+    */
+    function pickComputerMove() {
+      const randomNumber = Math.random();
+      if (randomNumber >= 0 && randomNumber < 1 / 3) { computerMove = 'rock'; }
+      else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) { computerMove = 'paper'; }
+      else { computerMove = 'scissors' };
+      return computerMove;
+    }
+
+    function playGame(playerMove) {
+      const computerMove = pickComputerMove();
+      if (playerMove === 'scissors') {
+        if (computerMove === 'rock')
+          result = 'You Lose';
+        else if (computerMove === 'paper')
+          result = 'You Win';
+        else
+          result = 'Tie';
+      }
+      else if (playerMove == 'paper') {
+        if (computerMove === 'rock')
+          result = 'You Win';
+        else if (computerMove === 'paper')
+          result = 'Tie';
+        else
+          result = 'You Lose';
+      }
+      else {
+        if (computerMove === 'rock')
+          result = 'Tie'
+        else if (computerMove === 'paper')
+          result = 'You lose';
+        else
+          result = 'You Win';
+      }
+
+      if (result === 'You Win')
+        score.Wins++;
+      else if (result === 'Tie')
+        score.Ties++;
+      else
+        score.Loses++;
+
+      localStorage.setItem('score', JSON.stringify(score));
+      //localStorage suporta doar stringuri asa ca transform in string cu JSON.stringify
+
+      alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}.
+Score: Wins:${score.Wins}, Ties:${score.Ties}, Losses:${score.Loses}`);
+    }
+  </script>
+</body>
+
+</html>

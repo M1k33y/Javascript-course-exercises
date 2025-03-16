@@ -1,0 +1,36 @@
+body{
+  background-color: black;
+}
+.number-button
+{
+  background-color: rgb(51, 51,51);
+  color:white;
+  height:60px;
+  width:60px;
+  font-size:30px;
+  border:none;
+  border-radius:60px;
+  cursor:pointer;
+}
+.operation-button
+{
+  background-color: orange;
+  color:white;
+  font-size:30px;
+  height:60px;
+  width:60px;
+  font-size:30px;
+  border:none;
+  border-radius:60px;
+  cursor:pointer;
+}
+.calculation
+{
+  color:white;
+  font-size:50px;
+  margin:2px;
+}
+.clear-button
+{
+  width:100px;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+
+</head>
+
+<body>
+    <button onclick="
+      makeChoose('heads');
+      ">heads</button>
+
+    <button onclick="
+    makeChoose('tails');
+    ">tails</button>
+    <p class="js-choose"></p>
+  <script>
+   
+    function makeChoose(choose)
+    {
+      document.querySelector('.js-choose').innerHTML=`You choose: ${choose}`;
+    }
+   
+  </script>
+</body>
+
+</html>

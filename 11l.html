@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title>Todo List</title>
+  </head>
+
+  <body>
+    <script> 
+    let Array=[21,30,90,81,59,36];
+    let mini=Array[0],maxi=Array[0];
+      function minMax(Array)
+      {
+        for(let i=0;i<Array.length;i++)
+          {
+            if(Array[i]>maxi)
+            maxi=Array[i];
+            if(Array[i]<mini)
+            mini=Array[i];
+          }
+         let obj={mini,maxi};
+         return obj;
+      }
+
+      console.log(minMax(Array));
+    </script>
+  </body>
+</html>

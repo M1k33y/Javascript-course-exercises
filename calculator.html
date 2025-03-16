@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+  <title> Calculator</title>
+</head>
+
+<body>
+  <p> Calculator</p>
+
+  <p>
+    <button onclick="
+      calculation+='1';
+      console.log(`Calculul este: ${calculation}`);
+    ">1</button>
+
+    <button onclick="
+    calculation+='2';
+    console.log(`Calculul este: ${calculation}`);
+    ">2</button>
+
+    <button onclick="
+    calculation+='3';
+    console.log(`Calculul este: ${calculation}`);
+    ">3</button>
+
+    <button onclick="
+    calculation+=' + ';
+    console.log(`Calculul este: ${calculation}`);
+    ">+</button>
+  </p>
+
+  <p>
+    <button onclick="
+      calculation+='4';
+      console.log(`Calculul este: ${calculation}`);
+    ">4</button>
+
+    <button onclick="
+    calculation+='5';
+    console.log(`Calculul este: ${calculation}`);
+    ">5</button>
+
+    <button onclick="
+    calculation+='6';
+    console.log(`Calculul este: ${calculation}`);
+    ">6</button>
+
+    <button onclick="
+    calculation+=' - ';
+    console.log(`Calculul este: ${calculation}`);
+    ">-</button>
+  </p>
+
+  <p>
+    <button onclick="
+      calculation+='7';
+      console.log(`Calculul este: ${calculation}`);
+    ">7</button>
+
+    <button onclick="
+    calculation+='8';
+    console.log(`Calculul este: ${calculation}`);
+    ">8</button>
+
+    <button onclick="
+    calculation+='9';
+    console.log(`Calculul este: ${calculation}`);
+    ">9</button>
+
+    <button onclick="
+    calculation+=' * ';
+    console.log(`Calculul este: ${calculation}`);
+    ">*</button>
+  </p>
+
+  <p>
+    <button onclick="
+    calculation+='0';
+    console.log(`Calculul este: ${calculation}`);
+  ">0</button>
+
+    <button onclick="
+  calculation+='.';
+  console.log(`Calculul este: ${calculation}`);
+  ">.</button>
+
+    <button onclick="
+  calculation=eval(calculation);
+  console.log(calculation);
+  calculation='';
+  ">=</button>
+
+    <button onclick="
+  calculation+=' / ';
+  console.log(`Calculul este: ${calculation}`);
+  ">/</button>
+  </p>
+
+  <p>
+    <button onclick="
+  
+  console.log(`Buna calcul nou:`);
+  calculation='';
+  ">Clear</button>
+  </p>
+
+  <script>
+    let calculation = '';
+  </script>
+</body>
+
+
+</html>

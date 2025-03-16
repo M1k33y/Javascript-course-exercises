@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title>App</title>
+    
+  </head>
+
+
+  <body>
+    <button onclick="add();">
+      Add
+    </button>
+    <button onclick="remove();">
+      Remove
+    </button>
+    <script>
+      let mesagges=1;
+      function add()
+      {
+        mesagges++;
+      }
+      function remove()
+      {
+        mesagges--;
+      }
+
+       setInterval(function(){
+        if(document.title==='App' &&mesagges!=0) //== converteste la tipul de data si === nu conv compara tot
+        document.title=`(${mesagges}) New messages`;
+        else
+        document.title='App';
+      },1000);
+
+
+    </script>
+  </body>
+</html>

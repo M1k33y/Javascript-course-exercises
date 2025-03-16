@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Functions</title>
+
+</head>
+
+<body>
+
+  <script>
+  function convertTemp(degrees, unit)
+    {
+      let rez = 0;
+      if (unit === 'C')
+        rez = degrees * 9 / 5 + 32;
+      else
+        rez = (degrees - 32) * 5 / 9;
+      return rez;
+    }
+
+    console.log(convertTemp(25,'C'));
+    console.log(convertTemp(86,'F'));
+  </script>
+</body>
+
+</html>

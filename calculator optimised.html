@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+  <title> Calculator</title>
+</head>
+
+<body>
+  <p> Calculator</p>
+
+  <p>
+    <button onclick="
+     adauga(1);
+    ">1</button>
+
+    <button onclick="
+    adauga(2);
+    ">2</button>
+
+    <button onclick="
+    adauga(3);
+    ">3</button>
+
+    <button onclick="
+   adauga(' + ');
+    ">+</button>
+  </p>
+
+  <p>
+    <button onclick="
+     adauga(4);
+    ">4</button>
+
+    <button onclick="
+    adauga(5);
+    ">5</button>
+
+    <button onclick="
+   adauga(6);
+    ">6</button>
+
+    <button onclick="
+   adauga(' - ');
+    ">-</button>
+  </p>
+
+  <p>
+    <button onclick="
+      adauga(7);
+    ">7</button>
+
+    <button onclick="
+    adauga(8);
+    ">8</button>
+
+    <button onclick="
+    adauga(9);
+    ">9</button>
+
+    <button onclick="
+    adauga(' * ');
+    ">*</button>
+  </p>
+
+  <p>
+    <button onclick="
+    adauga(0);
+  ">0</button>
+
+    <button onclick="
+  adauga('.');
+  ">.</button>
+
+    <button onclick="
+  calculation=eval(calculation);
+  console.log(calculation);
+  calculation='';
+  ">=</button>
+
+    <button onclick="
+  adauga(' / ');
+  ">/</button>
+  </p>
+
+  <p>
+    <button onclick="
+  
+  console.log(`Buna calcul nou:`);
+  calculation='';
+  ">Clear</button>
+  </p>
+
+  <script>
+    let calculation = '';
+    function adauga(number)
+    {
+      calculation+=number;
+      console.log(`Calculul este: ${calculation}`);
+    }
+  </script>
+</body>
+
+
+</html>
